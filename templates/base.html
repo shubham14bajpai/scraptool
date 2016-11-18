@@ -1,0 +1,46 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>
+   Scraptool
+  </title>
+  <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport"/>
+  <link href="{% static 'css/main.css' %}" rel="stylesheet"/>
+ </head>
+ <body class="is-loading" id="index">
+  <div class="inner">
+   <img alt="" class="logo" src="{% static 'img/logo.png' %}"/>
+   <h1>
+    Scraptool 2.O
+   </h1>
+   {% block main %} {% endblock %}
+  </div>
+  
+  <footer id="footer">
+   <ul class="menu">
+    <li>
+     <a href="/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/terms">
+      Terms
+     </a>
+    </li>
+    <li>
+     <a href="/terms#privacy">
+      Privacy
+     </a>
+    </li>
+    <li>
+     <a href="/contact">
+      Contact
+     </a>
+    </li>
+   </ul>
+  </footer>
+ </body>
+</html>

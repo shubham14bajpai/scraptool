@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block main %} 
+
+
+    <p>
+    Simple, free, fully responsive one-page
+    <br/>
+    sites for tag oriented scrapping.
+   </p>
+
+  	<form action="result/" method="POST">
+        <style>
+            .form-control{
+                color: black;
+                width:345px;
+                height: 50px;
+                margin-bottom: 3px;
+            }
+            .select-form {
+                margin-left: 84px;
+                width:345px;
+                height: 50px;
+                background-color: white;
+                color: black;
+                margin-bottom: 3px;
+            }
+            
+        </style>
+  		<!-- calculator inputs-->
+  		<input class="form-control" type="url" name="url"" value=""></input>
+          <div class="select-form">
+          <select name="tag">
+            <!--<datalist id="tags">-->
+                
+                <option value=""></option>
+                <option value="!--">!--</option>
+                <option value="!DOCTYPE">!DOCTYPE</option>
+                <option value="a">a</option>
+                <option value="abbr">abbr</option>
+                <option value="acronym">acronym</option>
+                <option value="address">address</option>
+                <option value="applet">applet</option>
+                <option value="area">area</option>
+                <option value="article">article</option>
+                <option value="aside">aside</option>
+                <option value="audio">audio</option>
+                <option value="b">b</option>
+                <option value="base">base</option>
+                <option value="basefont">basefont</option>
+                <option value="bdi">bdi</option>
+                <option value="bdo">bdo</option>
+                <option value="big">big</option>
+                <option value="blockquote">blockquote</option>
+                <option value="body">body</option>
+                <option value="br">br</option>
+                <option value="button">button</option>
+                <option value="canvas">canvas</option>
+                <option value="caption">caption</option>
+                <option value="center">center</option>
+                <option value="cite">cite</option>
+                <option value="code">code</option>
+                <option value="col">col</option>
+                <option value="colgroup">colgroup</option>
+                <option value="datalist">datalist</option>
+                <option value="dd">dd</option>
+                <option value="del">del</option>
+                <option value="details">details</option>
+                <option value="dfn">dfn</option>
+                <option value="dialog">dialog</option>
+                <option value="dir">dir</option>
+                <option value="div">div</option>
+                <option value="dl">dl</option>
+                <option value="dt">dt</option>
+                <option value="em">em</option>
+                <option value="embed">embed</option>
+                <option value="fieldset">fieldset</option>
+                <option value="figcaption">figcaption</option>
+                <option value="figure">figure</option>
+                <option value="font">font</option>
+                <option value="footer">footer</option>
+                <option value="form">form</option>
+                <option value="frame">frame</option>
+                <option value="frameset">frameset</option>
+                <option value="h1">h1</option>
+                <option value="h2">h2</option>
+                <option value="h3">h3</option>
+                <option value="h4">h4</option>
+                <option value="h5">h5</option>
+                <option value="h6">h6</option>
+                <option value="head">head</option>
+                <option value="header">header</option>
+                <option value="hr">hr</option>
+                <option value="html">html</option>
+                <option value="i">i</option>
+                <option value="iframe">iframe</option>
+                <option value="img">img</option>
+                <option value="input">input</option>
+                <option value="ins">ins</option>
+                <option value="kbd">kbd</option>
+                <option value="keygen">keygen</option>
+                <option value="label">label</option>
+                <option value="legend">legend</option>
+                <option value="li">li</option>
+                <option value="link">link</option>
+                <option value="main">main</option>
+                <option value="map">map</option>
+                <option value="mark">mark</option>
+                <option value="menu">menu</option>
+                <option value="menuitem">menuitem</option>
+                <option value="meta">meta</option>
+                <option value="meter">meter</option>
+                <option value="nav">nav</option>
+                <option value="noframes">noframes</option>
+                <option value="noscript">noscript</option>
+                <option value="object">object</option>
+                <option value="ol">ol</option>
+                <option value="optgroup">optgroup</option>
+                <option value="option">option</option>
+                <option value="output">output</option>
+                <option value="p">p</option>
+                <option value="param">param</option>
+                <option value="pre">pre</option>
+                <option value="progress">progress</option>
+                <option value="q">q</option>
+                <option value="rp">rp</option>
+                <option value="rt">rt</option>
+                <option value="ruby">ruby</option>
+                <option value="s">s</option>
+                <option value="samp">samp</option>
+                <option value="script">script</option>
+                <option value="section">section</option>
+                <option value="select">select</option>
+                <option value="small">small</option>
+                <option value="source">source</option>
+                <option value="span">span</option>
+                <option value="strike">strike</option>
+                <option value="strong">strong</option>
+                <option value="style">style</option>
+                <option value="sub">sub</option>
+                <option value="summary">summary</option>
+                <option value="sup">sup</option>
+                <option value="table">table</option>
+                <option value="tbody">tbody</option>
+                <option value="td">td</option>
+                <option value="textarea">textarea</option>
+                <option value="tfoot">tfoot</option>
+                <option value="th">th</option>
+                <option value="thead">thead</option>
+                <option value="time">time</option>
+                <option value="title">title</option>
+                <option value="tr">tr</option>
+                <option value="track">track</option>
+                <option value="tt">tt</option>
+                <option value="u">u</option>
+                <option value="ul">ul</option>
+                <option value="var">var</option>
+                <option value="video">video</option>
+                <option value="wbr">wbr</option>
+                
+            </select>
+         </div>           
+  		<input class="btn btn-primary" type="submit" name="" value="Go"></input>
+
+  		{% csrf_token %}
+
+  	</form>
+      
+    <p class="note">
+        ( currently in beta – follow updates<a href="https://twitter.com/n33co/status/706918068019191809">here</a>)
+   </p>
+
+
+
+{% endblock %}

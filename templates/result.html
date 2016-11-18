@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block main %} 
+
+  	<h2> Results  </h2>
+      
+      <style>
+          ul {
+              list-style-type: none;
+          }
+      </style>
+
+  	<ul>
+          {% for link in links %}
+            <li>{{ link }}</li>
+            {% endfor %}
+    </ul>
+
+{% endblock %}
